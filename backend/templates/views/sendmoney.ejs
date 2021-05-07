@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/sendmoney.css">
+   
+</head>
+<body>
+   
+   <%- include('../partials/navbar'); %>
+   
+    <div class="overlay">
+        <!-- LOGN IN FORM by Omar Dsoky -->
+        <form action="/sendmoney" method="POST">
+           <!--   con = Container  for items in the form-->
+           <div class="con">
+           <!--     Start  header Content  -->
+           <header class="head-form">
+              <h2>PayAmount</h2>
+              <!--     A welcome message or an explanation of the login form -->
+             
+           </header>
+           <!--     End  header Content  -->
+           <br>
+           <div class="field-set">
+             
+              <!--   user name -->
+                 <!--  -->
+                <!--   user name Input-->
+                 <input class="form-input" id="txt-input" type="text" name="sender" placeholder="sender_email" required>
+             
+              <br>
+
+             
+             <!--   user name Input-->
+              <input class="form-input" id="txt-input" type="text" name="receiver" placeholder="receiver_email" required>
+             
+                   <!--   Password -->
+             
+              <!--   Password Input-->
+              <input class="form-input" type="text" placeholder="Amount" id="txt-input"  name="Pay" required>
+             
+        <!--      Show/hide password  -->
+        <br><br>
+               
+             
+             
+              <br>
+        <!--        buttons -->
+        <!--      button LogIn -->
+              <button class="pay" type="submit"> Pay </button>
+          
+        </form>
+        </div>
+      
+</body>
+</html>
