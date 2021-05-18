@@ -1,6 +1,6 @@
 const express = require("express");
 const alert = require('alert');
- const popup = require('node-popup/dist/cjs.js');
+const popup = require('node-popup/dist/cjs.js');
 const app = express();
 const port = process.env.PORT || 3000;
 const fileUpload = require('express-fileupload');
@@ -125,7 +125,7 @@ app.post("/sendmoney", async function (request, response, next) {
             }
             else {
 
-                    alert("Payment Unsucceessful");
+                alert("Payment Unsucceessful");
             }
             response.render("sendmoney")
         }
@@ -157,7 +157,7 @@ app.get("/viewdetails", function (request, response) {
             if (err) throw err;
             response.render("viewdetails", { record: result })
         })
-       
+
     }
 })
 
@@ -168,7 +168,7 @@ app.get("/transactionhistory2", function (request, response) {
     }
     else {
 
-      
+
         detail_of_transaction = "select * from transactions where senderemail = '" + email + "' or receiveremail = '" + email + "'order by dateoftransfer desc,timeoftransfer desc";
 
         conn.query(detail_of_transaction, function (err, result, record) {
@@ -176,30 +176,30 @@ app.get("/transactionhistory2", function (request, response) {
             response.render("transactionhistory2", { records: result })
             console.log(result);
         })
-       
+
     }
 })
 
-app.get("/addcustomers",function(request,response){
+app.get("/addcustomers", function (request, response) {
     response.render("addcustomers");
 })
-app.post("/addcustomers",function(request,response,next){
-    try{
+app.post("/addcustomers", function (request, response, next) {
+    try {
         const name = request.body.name;
         const email = request.body.email;
-        const bankBalance =request.body.bankBalance;
+        const bankBalance = request.body.bankBalance;
         const accountno = request.body.accountno;
-        const city =request.body.city;
+        const city = request.body.city;
         const mobileno = request.body.mobileno;
-        const create = "insert into customers (name,email,bankBalance,accountno,city,mobileno) values('"+name+"','"+email+"',"+bankBalance+",'"+accountno+"','"+city+"',"+mobileno+");";
-        conn.query(create,function(err,result,fields){
+        const create = "insert into customers (name,email,bankBalance,accountno,city,mobileno) values('" + name + "','" + email + "'," + bankBalance + ",'" + accountno + "','" + city + "'," + mobileno + ");";
+        conn.query(create, function (err, result, fields) {
             if (err) throw err;
             response.render("addcustomers");
         })
         alert("Created Successfully")
     }
-    catch(error){
-            console.log(error);
+    catch (error) {
+        console.log(error);
     }
 })
 

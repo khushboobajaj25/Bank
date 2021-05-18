@@ -1,62 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
+
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/sendmoney.css">
-   
+   <title>Document</title>
+   <link rel="stylesheet" href="/css/sendmoney.css">
+
 </head>
+
 <body>
-   
+
    <%- include('../partials/navbar'); %>
-   
-    <div class="overlay">
-        <!-- LOGN IN FORM by Omar Dsoky -->
-        <form action="/addcustomers" method="POST">
-           <!--   con = Container  for items in the form-->
-           <div class="con">
-           <!--     Start  header Content  -->
-           <header class="head-form">
-              <h2>Add New Customer</h2>
-              
-             
-           </header>
-          
-           <br>
-           <div class="field-set">
-             
-             
-                 <input class="form-input" id="txt-input" type="text" name="name" placeholder="Name" required>
-             
-              <br>
 
-             
-           
-              <input class="form-input" id="txt-input" type="text" name="email" placeholder="Email" required>
-             
-              <input class="form-input" type="text" placeholder="BankBalance" id="txt-input"  name="bankBalance" required>
+      <div class="overlay">
+         <!-- LOGN IN FORM by Omar Dsoky -->
+         <form action="/addcustomers" method="POST">
+            <!--   con = Container  for items in the form-->
+            <div class="con">
+               <!--     Start  header Content  -->
+               <header class="head-form">
+                  <h2>Add New Customer</h2>
 
-              <input class="form-input" type="text" placeholder="AccountNo" id="txt-input"  name="accountno" required>
 
-              <input class="form-input" type="text" placeholder="City" id="txt-input"  name="city" required>
+               </header>
 
-              <input class="form-input" type="text" placeholder="Mobile No" id="txt-input"  name="mobileno" required>
-             
-        
-        <br><br>
-               
-             
-             
-              <br>
-       
-              <button class="pay" type="submit"> Add </button>
-          
-        </form>
-        </div>
-      
+               <br>
+               <div class="field-set">
+
+
+                  <input class="form-input" id="txt-input" type="text" name="name" placeholder="Name" required>
+
+                  <br>
+
+
+
+                  <input class="form-input" id="txt-input" type="text" name="email" placeholder="Email" required>
+
+                  <input class="form-input" type="text" placeholder="BankBalance" id="txt-input" name="bankBalance"
+                     required>
+
+                  <input class="form-input" type="text" placeholder="AccountNo" id="txt-input" name="accountno"
+                     required>
+
+                  <input class="form-input" type="text" placeholder="City" id="txt-input" name="city" required>
+
+                  <input class="form-input" type="text" placeholder="Mobile No" id="txt-input" name="mobileno" required>
+
+
+                  <br><br>
+
+
+
+                  <br>
+
+                  <button class="pay" type="submit"> Add </button>
+
+         </form>
+      </div>
+
 </body>
+
 </html>
